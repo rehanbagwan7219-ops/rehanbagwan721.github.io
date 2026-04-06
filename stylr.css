@@ -38,7 +38,7 @@ nav ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 22px;
 }
 
 nav ul li a {
@@ -53,24 +53,8 @@ nav ul li a:hover {
     color: #bbf7d0;
 }
 
-/* Dark mode button */
-nav button {
-    background: #22c55e;
-    color: white;
-    border: none;
-    padding: 8px 14px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-nav button:hover {
-    background: #16a34a;
-}
-
 /* =========================
-   HOME / HEADER
+   HEADER / HOME
 ========================= */
 header {
     text-align: center;
@@ -108,12 +92,12 @@ h1 {
 
 h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     color: #065f46;
 }
 
 h3 {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     color: #047857;
 }
 
@@ -122,15 +106,26 @@ h3 {
 ========================= */
 .card {
     background: white;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 22px;
+    margin: 18px 0;
+    border-radius: 14px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
     transition: 0.3s;
 }
 
 .card:hover {
     transform: translateY(-6px);
+}
+
+/* =========================
+   PROJECT IMAGES
+========================= */
+.card img {
+    width: 100%;
+    max-width: 450px;
+    display: block;
+    margin: 15px auto;
+    border-radius: 10px;
 }
 
 /* =========================
@@ -140,32 +135,37 @@ ul {
     margin-left: 20px;
 }
 
-/* =========================
-   IMAGES
-========================= */
-img {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-top: 10px;
+li {
+    margin-bottom: 6px;
 }
 
 /* =========================
-   GALLERY
+   GALLERY GRID
 ========================= */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+    gap: 16px;
 }
 
 .gallery img {
+    width: 100%;
     height: 200px;
     object-fit: cover;
+    border-radius: 12px;
     transition: 0.3s;
 }
 
 .gallery img:hover {
     transform: scale(1.05);
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+#contact p {
+    margin: 10px 0;
+    font-size: 16px;
 }
 
 /* =========================
@@ -178,7 +178,6 @@ button {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 15px;
     transition: 0.3s;
 }
 
@@ -187,21 +186,14 @@ button:hover {
 }
 
 /* =========================
-   CONTACT SECTION
-========================= */
-#contact p {
-    margin: 8px 0;
-}
-
-/* =========================
    FOOTER
 ========================= */
 footer {
     text-align: center;
-    padding: 15px;
+    padding: 16px;
     background: #065f46;
     color: white;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 /* =========================
@@ -220,12 +212,30 @@ body.dark .card {
     background: #1f2937;
 }
 
+body.dark footer {
+    background: #022c22;
+}
+
 body.dark h2 {
     color: #22c55e;
 }
 
-body.dark footer {
-    background: #022c22;
+/* =========================
+   ANIMATION (Extra Feature)
+========================= */
+.card {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* =========================
@@ -264,7 +274,7 @@ body.dark footer {
     }
 
     nav ul {
-        gap: 12px;
+        gap: 14px;
     }
 
 }
