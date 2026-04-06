@@ -1,0 +1,270 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+    background: #ecfdf5;
+    color: #1f2937;
+    line-height: 1.6;
+    transition: 0.3s;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+nav {
+    background: #065f46;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #bbf7d0;
+}
+
+/* Dark mode button */
+nav button {
+    background: #22c55e;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav button:hover {
+    background: #16a34a;
+}
+
+/* =========================
+   HOME / HEADER
+========================= */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #065f46, #22c55e);
+    color: white;
+}
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #065f46;
+}
+
+h3 {
+    margin-bottom: 10px;
+    color: #047857;
+}
+
+/* =========================
+   CARD DESIGN
+========================= */
+.card {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+/* =========================
+   LISTS
+========================= */
+ul {
+    margin-left: 20px;
+}
+
+/* =========================
+   IMAGES
+========================= */
+img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* =========================
+   GALLERY
+========================= */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery img {
+    height: 200px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+    padding: 10px 18px;
+    background: #16a34a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #15803d;
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+#contact p {
+    margin: 8px 0;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #065f46;
+    color: white;
+    margin-top: 20px;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+body.dark {
+    background: #111827;
+    color: white;
+}
+
+body.dark nav {
+    background: #022c22;
+}
+
+body.dark .card {
+    background: #1f2937;
+}
+
+body.dark h2 {
+    color: #22c55e;
+}
+
+body.dark footer {
+    background: #022c22;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header {
+        padding: 40px 15px;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    .profile-img {
+        width: 130px;
+        height: 130px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+}
